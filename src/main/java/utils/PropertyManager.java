@@ -8,10 +8,8 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import java.util.Properties;
-import java.util.logging.Logger;
 
 public class PropertyManager {
-    private static final Logger logger = Logger.getLogger(PropertyManager.class.getName());
     private static final ClassLoader loader;
     private static final String PROPERTY_FILE_NAME = "config.properties";
     private static final ThreadLocal<Properties> properties = new ThreadLocal<>();
@@ -43,7 +41,7 @@ public class PropertyManager {
         StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
         Properties clientProperties = new EncryptableProperties(encryptor);
 
-        try (InputStream is = PropertyManager.class.getClassLoader().getResourceAsStream(PROPERTY_FILE_NAME)) {
+        try (InputStream is = loader.getResourceAsStream(PROPERTY_FILE_NAME)) {
             clientProperties.load(is);
 
             properties.set(new EncryptableProperties(new StandardPBEStringEncryptor()));
