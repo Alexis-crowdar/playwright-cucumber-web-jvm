@@ -5,7 +5,7 @@ import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 
-public class Context implements BrowserLauncher {
+public class Context {
     private static final ThreadLocal<Context> SESSION = new ThreadLocal<>();
     private static final Playwright playwright;
     private Browser browser;
@@ -42,19 +42,24 @@ public class Context implements BrowserLauncher {
         return this.page;
     }
 
-    @Override
-    public void createFirefoxInstance() {
+    protected void createFirefoxInstance() {
         this.launch(playwright.firefox());
     }
 
-    @Override
-    public void createChromiumInstance() {
+    protected void createChromiumInstance() {
         this.launch(playwright.chromium());
     }
 
-    @Override
-    public void createWebKitInstance() {
+    protected void createWebKitInstance() {
         this.launch(playwright.webkit());
+    }
+
+    public void createBrowserInstance(String browser) {
+        switch (browser) {
+            case "firefox" -> createFirefoxInstance();
+            case "chromium" -> createChromiumInstance();
+            case "webkit" -> createWebKitInstance();
+        }
     }
 
     public void launch(BrowserType browserType) {
