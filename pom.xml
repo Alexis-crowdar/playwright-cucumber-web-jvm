@@ -101,11 +101,11 @@
                 <version>3.0.0-M7</version>
                 <configuration>
                     <systemPropertyVariables>
-                        <TEST_MANAGER_USERNAME>admin</TEST_MANAGER_USERNAME>
-                        <TEST_MANAGER_PASSWORD>admin</TEST_MANAGER_PASSWORD>
-                        <TEST_MANAGER_API_HOST>https://run-result-import.dev.lippia.io</TEST_MANAGER_API_HOST>
-                        <TEST_MANAGER_RUN_NAME>playwright-cucumber aut sample #1</TEST_MANAGER_RUN_NAME>
-                        <TEST_MANAGER_PROJECT_CODE>REPORTES</TEST_MANAGER_PROJECT_CODE>
+                        <TEST_MANAGER_USERNAME>GenericUserLTM</TEST_MANAGER_USERNAME>
+                        <TEST_MANAGER_PASSWORD>GenericUserLTM</TEST_MANAGER_PASSWORD>
+                        <TEST_MANAGER_API_HOST>https://runs.crowdaracademy.lippia.io/</TEST_MANAGER_API_HOST>
+                        <TEST_MANAGER_RUN_NAME>playwright-cucumber-jvm test #1</TEST_MANAGER_RUN_NAME>
+                        <TEST_MANAGER_PROJECT_CODE>PCJV</TEST_MANAGER_PROJECT_CODE>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
