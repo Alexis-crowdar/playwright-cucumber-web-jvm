@@ -1,7 +1,7 @@
 @SwagLabsLogin
 Feature: Login to the SwagLabs application
 
-  @CorrectCredentials
+  @c
   Scenario: Login to the SwagLabs application with the correct credentials.
     Given that the user launched SwagLabs application
     When try to login with credentials username: "standard_user" and password: "secret_sauce"

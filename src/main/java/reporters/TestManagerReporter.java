@@ -1,3 +1,4 @@
+/*
 package reporters;
 
 import ltm.TestManagerAPIAdapter;
@@ -11,4 +12,4 @@ public class TestManagerReporter extends TestManagerAPIAdapter {
     public String getBase64Image() {
         return null;
     }
-}
+}*/
