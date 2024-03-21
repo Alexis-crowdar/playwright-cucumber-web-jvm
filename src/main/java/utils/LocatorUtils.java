@@ -15,12 +15,10 @@ public final class LocatorUtils {
         return Context.getSession().getPage().locator(locatorString);
     }
 
-    // Click with explicit waiting for presence and clickability
     public static void click(String locatorString) {
         getLocator(locatorString).click();
     }
 
-    // Fill with explicit waiting for presence
     public static void fill(String locatorString, String value) {
         getLocator(locatorString).fill(value);
     }
@@ -33,15 +31,8 @@ public final class LocatorUtils {
         return getLocator(locatorString).isVisible();
     }
 
-
-    // Additional methods inspired by the provided code
-
     public static String getAttribute(String locatorString, String attribute) {
         return getLocator(locatorString).getAttribute(attribute);
-    }
-
-    public static List<Locator> getLocators(String locatorString) {
-        return getLocator(locatorString).queryAllSelectors(locatorString);
     }
 
     public static boolean isEnabled(String locatorString) {
@@ -57,8 +48,6 @@ public final class LocatorUtils {
         getLocator(locatorString).scrollIntoViewIfNeeded();
     }
 
-    // You can add more methods for common interactions or specific needs
-
     public static void selectByValue(String locatorString, String value) {
         getLocator(locatorString).selectOption(value);
     }
@@ -70,14 +59,11 @@ public final class LocatorUtils {
     public static void hover(String locatorString) {
         getLocator(locatorString).hover();
     }
-
-    // Wait for element to be not visible
     public static void waitForNotVisible(String locatorString) {
         Locator elementLocator = getLocator(locatorString);
         elementLocator.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.HIDDEN));
     }
 
-    // Wait for element to be disabled
     public static void waitForDisabled(String locatorString) {
         Locator elementLocator = getLocator(locatorString);
         elementLocator.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.DETACHED));
