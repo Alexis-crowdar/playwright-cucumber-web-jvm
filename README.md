@@ -44,6 +44,26 @@ This is an automated testing framework designed to work with Playwright in Java 
 You can execute the tests using Maven from the command line:
 `$ mvn clean test`
 
+## Lippia Test Manager
+This integration uses an adaptar that automatically ingests results of Scenarios into Lippia Test Manager.
+You just simply need to implement [_LTM-adapter-cucumber4-JVM_](https://github.com/Crowdar/LTM-adapter-cucumber4-JVM) and you can see the results in Lippia Test Manager as an Automated Run Result.
+To configure your automation project to inject results into LTM, you should do the following things:
+
+Include property reference ${test-manager.report} in cucumber options (pom.xml)
+To set following properties, you need obtain an account in LTM (visit the web https://www.lippia.io/ to start free trial account)
+Properties:
+
+TEST_MANAGER_API_HOST: https://example.com
+
+TEST_MANAGER_RUN_NAME: id run in project
+
+TEST_MANAGER_PROJECT_CODE: id project to inject test execution results
+
+TEST_MANAGER_USERNAME: username Account LTM
+
+TEST_MANAGER_PASSWORD: password Account LTM
+
+
 
 Folder's description:
 
