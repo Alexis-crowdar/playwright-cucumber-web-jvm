@@ -1,16 +1,9 @@
 # Playwright - Cucumber Sample Project
 
 ## Purpose:
-This is an Sample Project designed to work with Playwright in Java environments using Cucumber. It allows for efficient and structured end-to-end testing of web applications.
-
-
-Por supuesto, aquí tienes un ejemplo de cómo podría ser el archivo `README.md` en inglés para tu proyecto de framework de automatización con Playwright, Java y Cucumber:
+Sample Project designed to work with Playwright in Java environments using Cucumber. It allows for efficient and structured end-to-end testing of web applications.
 
 ----------
-
-# Automated Testing Framework with Playwright, Java, and Cucumber
-
-This is an automated testing framework designed to work with Playwright in Java environments using Cucumber. It allows for efficient and structured end-to-end testing of web applications.
 
 ## Key Features
 
